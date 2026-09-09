@@ -1,0 +1,41 @@
+name: UI or usability bug
+description: Report a display, navigation, search, mobile, or usability problem.
+title: "[UI] "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe what you saw and what you expected instead.
+    validations:
+      required: true
+
+  - type: input
+    id: page
+    attributes:
+      label: Page or feature
+      placeholder: https://sql.fm/...
+
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device type
+      options:
+        - Desktop
+        - Phone
+        - Tablet
+        - Other
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser
+      placeholder: e.g. Chrome, Safari, Edge
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot or additional details
+      description: You can drag screenshots into this field.
