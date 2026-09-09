@@ -1,0 +1,47 @@
+name: Incorrect feature availability
+description: Report an incorrect SQL Server version, edition, or Azure availability status.
+title: "[Feature correction] "
+labels:
+  - data-correction
+body:
+  - type: input
+    id: feature
+    attributes:
+      label: Feature
+      placeholder: e.g. SQL Server Agent
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Version / edition / environment
+      placeholder: e.g. SQL Server 2022 Express or Azure SQL Managed Instance
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: What SQL.FM currently shows
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What it should show
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: Microsoft documentation
+      description: Please provide a Microsoft source if available.
+      placeholder: https://learn.microsoft.com/...
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional context
