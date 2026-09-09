@@ -1,0 +1,31 @@
+name: Documentation or source correction
+description: Report an outdated, broken, or incorrect documentation link or explanatory note.
+title: "[Documentation] "
+labels:
+  - documentation
+body:
+  - type: input
+    id: page
+    attributes:
+      label: SQL.FM page or feature
+      placeholder: e.g. Always On Availability Groups
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is incorrect or outdated?
+    validations:
+      required: true
+
+  - type: input
+    id: replacement
+    attributes:
+      label: Suggested Microsoft documentation
+      placeholder: https://learn.microsoft.com/...
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional context
